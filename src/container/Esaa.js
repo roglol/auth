@@ -6,8 +6,8 @@ class Esaa extends React.Component {
     render(){
         return (
             <div>
-<input type="button" value="daumate" onClick={ () => this.props.addValue(1)}/>
-<input type="button" value="gamaakel" onClick={ () => this.props.subtractValue(1)} />
+<input type="button" value="addd" onClick={ () => this.props.addValue(1)}/>
+<input type="button" value="minuss" onClick={ () => this.props.subtractValue(1)} />
 <div>{ this.props.initialValue || 0}</div>
             </div>
         )

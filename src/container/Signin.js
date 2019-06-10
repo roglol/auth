@@ -17,20 +17,13 @@ componentDidUpdate(){
 }
     onSubmit = (e) => {
         e.preventDefault();
-        this.raio()
-        // this.props.submit('rakaia reacti too')
         this.props.signin({
             email:this.state.identifier,
             password:this.state.password
         })
         
     }
-    raio = () => {
-        console.log('meeeh')
-       return () => {
-           console.log('araaa')
-       }
-    }
+   
     onChange = (e,amitkeni) =>{
         let newState = {...this.state}
         newState[amitkeni] = e.target.value
@@ -65,8 +58,9 @@ const mapStateToProps = state => {
 
  const signin = (data) => {
     return dispatch =>{
-        axios.post('../../server/server.php',data).then(res=>{
-            dispatch(this.props.auth(res.data))
+        axios.post('http://localhost:81/api/index.php', data
+        ).then(res=>{
+            dispatch({type:"AUTH", value:res.data})
         })
     }
 }
