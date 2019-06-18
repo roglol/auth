@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
-import MainApp from './app/index'
+import MainApp from '../app/index'
 
 class App extends Component {
     render(){
