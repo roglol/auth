@@ -1,0 +1,20 @@
+body{
+    background:seagreen;
+}
+
+.navigation{
+    display:flex;
+    justify-content:space-between;
+    max-width:50%;
+    margin:auto;
+}
+
+.navigation a {
+    text-decoration:none;
+    color:#ffff;
+}
+
+.albums > div{
+    display:inline-block;
+    text-align:center;
+}

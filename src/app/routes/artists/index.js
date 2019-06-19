@@ -1,15 +1,15 @@
 import React from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom';
 import {asyncComponent} from 'react-async-component';
-import dashboard from './routes/Dashboard'
+import artists from './routes/Artists'
 
 
-const Dashboard = ({match}) => (
+const Artists = ({match}) => (
     <div className="wrapper">
     <Switch>
-<Route path={`${match.url}`} component={dashboard}/>
+<Route path={`${match.url}`} component={artists}/>
     </Switch>
     </div>
 )
 
-export default Dashboard;
+export default Artists;
